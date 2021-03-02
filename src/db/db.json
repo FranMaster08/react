@@ -1,0 +1,25 @@
+[
+    {
+        "id":1,
+        "name":"Fran Jimenez",
+        "dni":10320
+    },
+    {
+        "id":2,
+        "name":"Fede Gonza",
+        "dni":463223
+    },
+
+    {
+        "id":3,
+        "name":"Adrian Jimenez",
+        "dni":7894
+    },
+
+    {
+        "id":4,
+        "name":"Grisell Jimenez",
+        "dni":43564
+    }
+
+]

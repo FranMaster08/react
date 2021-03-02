@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import db from "./db/db.json";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+// let Saludo=(props)=>{
+//   return <div>Hola {props.popo} y hola {props.fran}</div>
+// }
+
+class Saludo extends Component{
+  render(){
+    return <div>Hola {this.props.popo} y hola {this.props.fran}</div>
+  }
+}
+
+class Lista extends Component{
+ 
+  state={
+    listaDeDatos:db,
+    visible:true
+  }
+
+  render(){
+    console.log(db);
+    return <div> 
+              <ul>{this.state.listaDeDatos.map(item=><li>{item.name}</li>)}</ul>
+          </div>
+  }
+
+}
+
+
+
+class App extends Component{
+  render(){
+
+    return <div><Lista/></div>
+  }
 }
 
 export default App;
